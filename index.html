@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubik's Cube and Twisty Puzzle Wiki</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+</head>
+<body>
+    <header>
+        <h1>Rubik's Cube and Twisty Puzzle Wiki</h1>
+        <section class="QuickLinks">
+            <a href="index.html">
+                <img src="Images/User.svg" title="Click here if you want to access your profile">
+            </a>
+            <a href="index.html">
+                <img src="Images/FlagEnglish.png" title="Click here if you want to switch the language">
+            </a>
+            <a href="index.html">
+                <img src="Images/Settings.svg" title="Click here if you want to change the settings">
+            </a>
+            <a href="index.html">
+                <img src="Images/Notification.svg" title="Click here for your notifications">
+            </a>
+        </section>
+    </header>
+    <aside class="Menu" id="Menu">
+        <a href="index.html" class="Logo">
+            <figure><img src="Images/Logo.png" alt="" ></figure>
+            <strong>Ruwix</strong>
+            <p>Twisty Puzzle Wiki</p>
+        </a>
+        
+        <input type="search" id="SearchField" placeholder="Search">
+        <section>
+            <a href="index.html">Tools</a>
+            <a href="index.html">Puzzles</a>
+            <a href="index.html">Solving Methods</a>
+            <a  onclick="ToogleMathematics()">Mathematics</a>
+            <a href="index.html">History</a>
+            <a href="index.html">Resources</a>
+        </section>
+    </aside>
+    <aside class="Menu2" id="Menu2Class">
+        <section id="Menu2Section">
+            <a href="index.html">Mathematics of the Rubiks cube</a>
+            <a href="index.html">Algorithms</a>
+            <a href="index.html">Commutators & Conjugates</a>
+            <a href="index.html">Unsolvable Cube</a>
+            <a href="godsNumber.html">God's Number</a>
+        </section>
+    </aside>
+    <main class="mainMain">
+        <section class="pageDescription">
+            <article>
+                <p>Ruwix is the best place to learn about the Rubik's Cube™ and other twisty puzzles. Check out the online solver, the cube timer, simulators or read the articles and tutorials or contribute to this site publishing your own articles.</p>
+            </article>
+        </section>
+        <section class="Discover">
+            <a href="index.html">
+                <nav>
+                    <h2>Discover Cubes</h2>
+                </nav>
+            </a>
+            <a href="index.html">
+                <nav>
+                    <h2>Learn to solve</h2>
+                </nav>
+            </a>
+            <a href="index.html">
+                <nav>
+                    <h2>Online Timer</h2>
+                </nav>
+            </a>
+            <a href="index.html">
+                <nav>
+                    <h2>Cube Solver</h2>
+                </nav>
+            </a>
+            <a href="index.html">
+                <nav>
+                    <h2>Speed cubing</h2>
+                </nav>
+            </a>
+            <a href="godsNumber.html">
+                <nav>
+                    <h2>Random Page</h2>
+                </nav>
+            </a>
+        </section>
+    </main>
+    <aside class="News">
+        <h2><a href="index.html">News</a></h2>
+        <a href="index.html">
+            <section>
+                <h3>New Rubik's Cube Record: Yiheng Wang - 4.69 sec</h3>
+                <p>New Rubiks' Cube average World Record was set by the Chinese Yiheng Wang with 4.69 seconds at the Yong Jun KL Speedcubing 2023 championship on March 12. He is only 8 years old...</p>
+            </section>
+        </a>
+        <a href="index.html">
+            <section>
+                <h3>New Tool: The Cube-solver!</h3>
+                <p>Just another Rubik's Cube solver, Cube-Solver.com is an online 2x2, 3x3, 4x4, 5x5 and other bigger NxNxN cube solver and simulator runs in your web browser.</p>
+            </section>
+        </a>
+        <a href="index.html">
+            <section>
+                <h3>The Effect of Using Rubik's Cube on Child Brain Activity</h3>
+                <p>The Rubik's Cube was invented and designed by architect and sculptor Ernő Rubik in 1970. It became one of the most popular toys of the twentieth century.</p>
+            </section>
+        </a>
+    </aside>
+    <aside>
+        <section class="SocialMedia">
+            <a href="index.html">
+                <img src="Images/Social Media/Facebook.svg" title="Facebook">
+            </a>
+            <a href="index.html">
+                <img src="Images/Social Media/Insta.svg" title="Instagram">
+            </a>
+            <a href="index.html">
+                <img src="Images/Social Media/Twitter.svg" title="Twitter">
+            </a>
+            <a href="index.html">
+                <img src="Images/Social Media/Youtube.svg" title="Youtube">
+            </a>
+        </section>
+    </aside>
+    <script>
+        var menu = document.getElementById("Menu");
+		var menu2 = document.getElementById("Menu2Class");
+        var menu3 = document.getElementById("Menu2Section");
+        
+        function ToogleMathematics(){
+            if (menu2.style.display != "flex") {
+				menu2.style.display = 'flex';
+                menu3.style.display = 'flex';
+                document.addEventListener('click', closeMenu);
+			} else {
+				menu2.style.display = 'none';
+                menu3.style.display = 'none';
+                document.removeEventListener('click', closeMenu);
+			}
+        }
+
+        function closeMenu(event) {
+			var clickedElement = event.target;
+
+			if (!menu3.contains(clickedElement) && !menu.contains(clickedElement)) {
+				 menu2.style.display = 'none';
+                 menu3.style.display = 'none';
+                 document.removeEventListener('click', closeMenu);
+			}
+		}
+	</script>
+</body>
+</html>
